@@ -1,4 +1,4 @@
-﻿namespace DotNet.FunctionalExtensions.Extensions;
+﻿namespace ArchitectProg.FunctionalExtensions.Extensions;
 
 public static class StringExtensions
 {

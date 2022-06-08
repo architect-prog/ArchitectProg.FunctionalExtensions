@@ -1,8 +1,8 @@
-﻿using DotNet.FunctionalExtensions.Extensions;
-using DotNet.FunctionalExtensions.Interfaces;
-using System.Reflection;
+﻿using System.Reflection;
+using ArchitectProg.FunctionalExtensions.Extensions;
+using ArchitectProg.FunctionalExtensions.Interfaces;
 
-namespace DotNet.FunctionalExtensions.Services;
+namespace ArchitectProg.FunctionalExtensions.Services;
 
 public class AssemblyFileReader : IAssemblyFileReader
 {

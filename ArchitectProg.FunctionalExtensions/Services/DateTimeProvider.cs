@@ -1,6 +1,6 @@
-﻿using DotNet.FunctionalExtensions.Interfaces;
+﻿using ArchitectProg.FunctionalExtensions.Interfaces;
 
-namespace DotNet.FunctionalExtensions.Services;
+namespace ArchitectProg.FunctionalExtensions.Services;
 
 public class DateTimeProvider : IDateTimeProvider
 {

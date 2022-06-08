@@ -1,4 +1,4 @@
-﻿namespace DotNet.FunctionalExtensions.Interfaces;
+﻿namespace ArchitectProg.FunctionalExtensions.Interfaces;
 
 public interface IAssemblyFileReader
 {
