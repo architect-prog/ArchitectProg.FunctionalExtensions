@@ -8,7 +8,7 @@ public class AssemblyFileReader : IAssemblyFileReader
 {
     public string GetFileFromCurrentAssembly(string path)
     {
-        if (path.IsNullOrWhitespace())
+        if (path.IsNullOrWhiteSpace())
         {
             throw new ArgumentNullException(nameof(path));
         }

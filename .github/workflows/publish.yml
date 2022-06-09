@@ -22,6 +22,11 @@ jobs:
     - name: restore packages
       run: dotnet restore
     - name: build
+      if: success()
       run: dotnet build $SOLUTION --configuration $BUILD_CONFIG --no-restore
+    - name: unit tests
+      if: success()
+      run: dotnet test --no-build --configuration $BUILD_CONFIG --verbosity normal
     - name: publish
+      if: success()
       run: dotnet nuget push **\*.nupkg --source 'https://api.nuget.org/v3/index.json' --api-key $NUGET_API_KEY
