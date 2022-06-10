@@ -8,7 +8,7 @@
 		<RepositoryUrl>https://github.com/architect-prog/ArchitectProg.FunctionalExtensions</RepositoryUrl>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<Version>1.2.4</Version>
+		<Version>1.2.5</Version>
 		<Description>Simple extensios for dotnet platfom.</Description>
 	</PropertyGroup>
 
