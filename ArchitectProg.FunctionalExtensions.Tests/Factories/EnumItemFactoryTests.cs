@@ -1,10 +1,9 @@
 ﻿using ArchitectProg.FunctionalExtensions.Contracts;
 using ArchitectProg.FunctionalExtensions.Factories;
-using ArchitectProg.FunctionalExtensions.Tests.TestData;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace ArchitectProg.FunctionalExtensions.Tests;
+namespace ArchitectProg.FunctionalExtensions.Tests.Factories;
 
 [TestFixture]
 public class EnumItemFactoryTests

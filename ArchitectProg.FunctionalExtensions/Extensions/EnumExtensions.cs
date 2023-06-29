@@ -9,7 +9,7 @@ public static class EnumExtensions
     {
         if (!source.IsDefined<TEnum>())
         {
-            throw new ArgumentException(string.Format(ExceptionConstants.EnumItemUndefined, source, typeof(TEnum)));
+            throw new ArgumentException($"Item with number {source} not defined in enum of type: {typeof(TEnum)}");
         }
 
         var result = (TEnum)Enum.ToObject(typeof(TEnum), source);

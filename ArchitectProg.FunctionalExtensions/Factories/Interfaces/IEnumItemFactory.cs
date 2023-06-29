@@ -1,6 +1,6 @@
 ﻿using ArchitectProg.FunctionalExtensions.Contracts;
 
-namespace ArchitectProg.FunctionalExtensions.Interfaces;
+namespace ArchitectProg.FunctionalExtensions.Factories.Interfaces;
 
 public interface IEnumItemFactory
 {

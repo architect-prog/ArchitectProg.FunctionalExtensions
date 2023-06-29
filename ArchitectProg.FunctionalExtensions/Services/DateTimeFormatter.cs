@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 using ArchitectProg.FunctionalExtensions.Constants;
-using ArchitectProg.FunctionalExtensions.Interfaces;
+using ArchitectProg.FunctionalExtensions.Services.Interfaces;
 
 namespace ArchitectProg.FunctionalExtensions.Services;
 

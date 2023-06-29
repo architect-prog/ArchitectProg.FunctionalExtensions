@@ -1,6 +1,6 @@
 ﻿using ArchitectProg.FunctionalExtensions.Contracts;
 using ArchitectProg.FunctionalExtensions.Extensions;
-using ArchitectProg.FunctionalExtensions.Interfaces;
+using ArchitectProg.FunctionalExtensions.Factories.Interfaces;
 
 namespace ArchitectProg.FunctionalExtensions.Factories;
 

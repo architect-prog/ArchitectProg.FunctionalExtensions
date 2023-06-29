@@ -2,7 +2,7 @@ using ArchitectProg.FunctionalExtensions.Extensions;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace ArchitectProg.FunctionalExtensions.Tests;
+namespace ArchitectProg.FunctionalExtensions.Tests.Extensions;
 
 [TestFixture]
 public class EnumerableExtensionsTests

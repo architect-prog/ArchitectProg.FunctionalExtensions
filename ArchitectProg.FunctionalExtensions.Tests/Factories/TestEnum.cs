@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace ArchitectProg.FunctionalExtensions.Tests.TestData;
+namespace ArchitectProg.FunctionalExtensions.Tests.Factories;
 
 public enum TestEnum
 {

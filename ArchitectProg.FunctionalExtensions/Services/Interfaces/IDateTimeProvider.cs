@@ -1,4 +1,4 @@
-﻿namespace ArchitectProg.FunctionalExtensions.Interfaces;
+﻿namespace ArchitectProg.FunctionalExtensions.Services.Interfaces;
 
 public interface IDateTimeProvider
 {
