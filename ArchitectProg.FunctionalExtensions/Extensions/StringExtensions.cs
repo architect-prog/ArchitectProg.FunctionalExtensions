@@ -1,8 +1,10 @@
-﻿namespace ArchitectProg.FunctionalExtensions.Extensions;
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace ArchitectProg.FunctionalExtensions.Extensions;
 
 public static class StringExtensions
 {
-    public static bool IsNullOrWhiteSpace(this string? source)
+    public static bool IsNullOrWhiteSpace([NotNullWhen(false)] this string? source)
     {
         var result = string.IsNullOrWhiteSpace(source);
         return result;
