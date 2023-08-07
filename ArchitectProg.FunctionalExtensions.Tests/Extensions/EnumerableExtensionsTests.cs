@@ -29,4 +29,29 @@ public class EnumerableExtensionsTests
 
         result.Should().BeEquivalentTo(expected);
     }
+
+
+    [TestCase(new int[] { 1, 2, 3, 5 }, false)]
+    [TestCase(new int[] { }, true)]
+    public void IsEmpty_When_Collection_Is_Valid_Should_Return_Expected_Result(IEnumerable<int> collection, bool expected)
+    {
+        var result = collection.IsEmpty();
+        result.Should().Be(expected);
+    }
+
+    [TestCase(null)]
+    public void IsEmpty_When_Collection_Is_Null_Should_Throw_ArgumentNullException(IEnumerable<int> collection)
+    {
+        var act = () => collection.IsEmpty();
+        act.Should().ThrowExactly<ArgumentNullException>().WithParameterName(nameof(collection));
+    }
+
+    [TestCase(new int[] { 1, 2, 3, 5 }, false)]
+    [TestCase(new int[] { }, true)]
+    [TestCase(null, true)]
+    public void IsNullOrEmpty_When_Collection_Is_Valid_Should_Return_Expected_Result(IEnumerable<int> collection, bool expected)
+    {
+        var result = collection.IsNullOrEmpty();
+        result.Should().Be(expected);
+    }
 }
