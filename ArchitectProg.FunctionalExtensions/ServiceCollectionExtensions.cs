@@ -18,6 +18,8 @@ public static class ServiceCollectionExtensions
         serviceCollection.AddScoped<IDateTimeProvider, DateTimeProvider>();
         serviceCollection.AddScoped<IEnumItemFactory, EnumItemFactory>();
 
+        serviceCollection.AddSingleton<IJsonSerializer, JsonSerializer>();
+
         return serviceCollection;
     }
 }
