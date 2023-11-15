@@ -9,7 +9,7 @@ namespace ArchitectProg.FunctionalExtensions.Tests.Extensions;
 public sealed class EncodingExtensionsTests
 {
     [TestCase(null)]
-    public void ToBytes_When_Argument_Is_Null_Should_Throw_ArgumentNullException(string source)
+    public void ToBytes_When_Argument_Is_Null_Should_Throw_ArgumentNullException(string? source)
     {
         var act = source.ToBytes;
         

@@ -11,7 +11,7 @@ public class StringExtensionsTests
     [TestCase(" ", " ")]
     [TestCase("Some text", "Some text")]
     [TestCase("Some text", "some text")]
-    public void EqualsIgnoreCase_When_Strings_Are_Equal_Should_Return_True(string first, string second)
+    public void EqualsIgnoreCase_When_Strings_Are_Equal_Should_Return_True(string? first, string? second)
     {
         var actual = first.EqualsIgnoreCase(second);
 
@@ -19,11 +19,11 @@ public class StringExtensionsTests
     }
 
     [TestCase(null, "")]
-    [TestCase(null, "")]
+    [TestCase("", null)]
     [TestCase(" ", "")]
     [TestCase("Some text", "Some text1")]
     [TestCase("Some text", "some text1")]
-    public void EqualsIgnoreCase_When_Strings_Are_Not_Equal_Should_Return_False(string first, string second)
+    public void EqualsIgnoreCase_When_Strings_Are_Not_Equal_Should_Return_False(string? first, string? second)
     {
         var actual = first.EqualsIgnoreCase(second);
 
