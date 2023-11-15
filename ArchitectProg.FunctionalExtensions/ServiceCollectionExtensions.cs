@@ -10,8 +10,7 @@ public static class ServiceCollectionExtensions
 {
     public static IServiceCollection AddFunctionalExtensions(this IServiceCollection serviceCollection)
     {
-        if (serviceCollection is null)
-            throw new ArgumentNullException(nameof(serviceCollection));
+        ArgumentNullException.ThrowIfNull(serviceCollection);
 
         serviceCollection.AddScoped<IAssemblyFileReader, AssemblyFileReader>();
         serviceCollection.AddScoped<IDateTimeFormatter, DateTimeFormatter>();
