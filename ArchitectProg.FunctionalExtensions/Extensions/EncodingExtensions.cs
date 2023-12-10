@@ -4,9 +4,12 @@ namespace ArchitectProg.FunctionalExtensions.Extensions;
 
 public static class EncodingExtensions
 {
-    public static ReadOnlyMemory<byte> ToBytes(this string source)
+    public static ReadOnlyMemory<byte> ToBytes(this string? source)
     {
-        ArgumentNullException.ThrowIfNull(source);
+        if (source.IsNullOrWhiteSpace())
+        {
+            return ReadOnlyMemory<byte>.Empty;
+        }
 
         var result = Encoding.UTF8.GetBytes(source);
         return result;

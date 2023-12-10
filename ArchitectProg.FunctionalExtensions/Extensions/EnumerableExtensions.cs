@@ -12,7 +12,6 @@ public static class EnumerableExtensions
         return result;
     }
 
-    /// <exception cref="ArgumentNullException"></exception>
     public static bool IsEmpty<T>(this IEnumerable<T> collection)
     {
         ArgumentNullException.ThrowIfNull(collection);
@@ -20,7 +19,7 @@ public static class EnumerableExtensions
         return !collection.Any();
     }
 
-    public static bool IsNullOrEmpty<T>([NotNullWhen(false)] this IEnumerable<T> collection)
+    public static bool IsNullOrEmpty<T>([NotNullWhen(false)] this IEnumerable<T>? collection)
     {
         return collection is null || collection.IsEmpty();
     }

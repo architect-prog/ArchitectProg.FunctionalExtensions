@@ -1,11 +1,6 @@
 ﻿namespace ArchitectProg.FunctionalExtensions.Contracts;
 
-public class EnumItemsCollection
+public class EnumItemsCollection(IEnumerable<EnumItem> items)
 {
-    public IEnumerable<EnumItem> Items { get; }
-
-    public EnumItemsCollection(IEnumerable<EnumItem> items)
-    {
-        Items = items;
-    }
+    public IEnumerable<EnumItem> Items { get; } = items;
 }

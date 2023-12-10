@@ -8,22 +8,14 @@ namespace ArchitectProg.FunctionalExtensions.Tests.Extensions;
 [TestFixture]
 public sealed class EncodingExtensionsTests
 {
-    [TestCase(null)]
-    public void ToBytes_When_Argument_Is_Null_Should_Throw_ArgumentNullException(string? source)
+    [TestCase("", new byte[0])]
+    [TestCase(" ", new byte[0])]
+    [TestCase(null, new byte[0])]
+    [TestCase("some text", new byte[] { 0x73, 0x6F, 0x6D, 0x65, 0x20, 0x74, 0x65, 0x78, 0x74 })]
+    public void ToBytes_When_Argument_Is_Valid_Should_Return_Expected_Result(string? source, byte[] expected)
     {
-        var act = source.ToBytes;
-        
-        act.Should().ThrowExactly<ArgumentNullException>().WithParameterName(nameof(source));
-    }
-
-    [Test]
-    public void ToBytes_When_Argument_Is_Valid_Should_Return_Expected_Result()
-    {
-        var source = "test 1";
-        byte[] expected = Encoding.UTF8.GetBytes(source);
-        
         var result = source.ToBytes().ToArray();
-        
+
         result.Should().BeEquivalentTo(expected);
     }
 
@@ -32,9 +24,9 @@ public sealed class EncodingExtensionsTests
     {
         var expected = "test 1";
         ReadOnlyMemory<byte> encodedString = Encoding.UTF8.GetBytes(expected);
-        
+
         var result = encodedString.FromBytes();
-        
+
         result.Should().Be(expected);
     }
 }

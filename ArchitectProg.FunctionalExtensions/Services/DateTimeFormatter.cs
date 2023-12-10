@@ -8,7 +8,13 @@ public class DateTimeFormatter : IDateTimeFormatter
 {
     public string FormatDate(DateTimeOffset dateTime)
     {
-        var result = dateTime.ToString(GenericConstants.Formats.DefaultDateTime, CultureInfo.InvariantCulture);
+        var result = FormatDate(dateTime, GenericConstants.Formats.DefaultDateTime);
+        return result;
+    }
+
+    public string FormatDate(DateTimeOffset dateTime, string dateFormat)
+    {
+        var result = dateTime.ToString(dateFormat, CultureInfo.InvariantCulture);
         return result;
     }
 }

@@ -1,13 +1,7 @@
 ﻿namespace ArchitectProg.FunctionalExtensions.Contracts;
 
-public class EnumItem
+public class EnumItem(int id, string name)
 {
-    public int Id { get; }
-    public string Name { get; }
-
-    public EnumItem(int id, string name)
-    {
-        Id = id;
-        Name = name;
-    }
+    public int Id { get; } = id;
+    public string Name { get; } = name;
 }
